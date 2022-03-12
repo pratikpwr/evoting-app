@@ -1,3 +1,5 @@
+import 'package:evoting/src/features/register/screens/register_screen.dart';
+import 'package:evoting/src/features/sign_in/screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/widgets/atoms/padding_vertical.dart';
@@ -33,13 +35,21 @@ class IntroScreen extends StatelessWidget {
                 ),
                 paddingV12,
                 IconTextButton(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_) {
+                      return RegisterScreen();
+                    }));
+                  },
                   text: 'Register',
                   icon: 'assets/registered.png',
                 ),
                 paddingV12,
                 IconTextButton(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_) {
+                      return SignInScreen();
+                    }));
+                  },
                   text: 'Sign In',
                   icon: 'assets/sign-in.png',
                 ),
