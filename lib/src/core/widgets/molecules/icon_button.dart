@@ -35,12 +35,13 @@ class IconTextButton extends StatelessWidget {
         onTap: onTap,
         child: Row(
           children: [
+            paddingH8,
             Flexible(
               flex: 1,
               child: Image.asset(
                 icon,
-                height: 64,
-                width: 64,
+                height: 52,
+                width: 52,
               ),
             ),
             paddingH16,

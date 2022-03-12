@@ -36,7 +36,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  'Please Enter your details below',
+                  'Please enter your details to Register',
                   textAlign: TextAlign.left,
                   style: textTheme.bodyText1,
                 ),
