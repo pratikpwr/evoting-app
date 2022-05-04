@@ -1,6 +1,6 @@
-import 'package:evoting/src/core/widgets/atoms/padding_vertical.dart';
-import 'package:evoting/src/core/widgets/atoms/snackbar.dart';
+import 'package:evoting/src/core/widgets/atoms/padding.dart';
 import 'package:evoting/src/core/widgets/molecules/button.dart';
+import 'package:evoting/src/features/vote/screens/voting_screen.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatefulWidget {
@@ -31,11 +31,24 @@ class _SignInScreenState extends State<SignInScreen> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
+                  'E-VOTE',
+                  style: textTheme.headline4,
+                ),
+                Image.asset(
+                  'assets/vote_illu.jpg',
+                  height: size.height * 0.4,
+                ),
+                Text(
+                  'Blockchain based Secured E-voting app',
+                  style: textTheme.bodyText1,
+                ),
+                padding12,
+                Text(
                   'Please enter your details to Sign In',
                   textAlign: TextAlign.left,
                   style: textTheme.bodyText1,
                 ),
-                paddingV24,
+                padding24,
                 TextField(
                   controller: _emailController,
                   style: textTheme.subtitle2,
@@ -43,12 +56,12 @@ class _SignInScreenState extends State<SignInScreen> {
                       prefixIcon: const Icon(
                         Icons.email_rounded,
                       ),
-                      hintText: 'Email',
+                      hintText: 'Mobile No.',
                       hintStyle: textTheme.subtitle2,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15))),
                 ),
-                paddingV12,
+                padding12,
                 TextField(
                   controller: _passwordController,
                   style: textTheme.subtitle2,
@@ -61,10 +74,13 @@ class _SignInScreenState extends State<SignInScreen> {
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(15))),
                 ),
-                paddingV16,
+                padding16,
                 EVButton(
                     onTap: () {
-                      showSnackBar(context, 'Feature Coming Soon!');
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return VotingScreen();
+                      }));
                     },
                     text: 'SIGN IN'),
               ],

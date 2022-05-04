@@ -1,6 +1,7 @@
 import 'package:evoting/src/core/themes/colors.dart';
-import 'package:evoting/src/core/widgets/atoms/padding_horizontal.dart';
 import 'package:flutter/material.dart';
+
+import '../atoms/padding.dart';
 
 class IconTextButton extends StatelessWidget {
   const IconTextButton({
@@ -35,7 +36,7 @@ class IconTextButton extends StatelessWidget {
         onTap: onTap,
         child: Row(
           children: [
-            paddingH8,
+            padding8,
             Flexible(
               flex: 1,
               child: Image.asset(
@@ -44,7 +45,7 @@ class IconTextButton extends StatelessWidget {
                 width: 52,
               ),
             ),
-            paddingH16,
+            padding16,
             Flexible(
                 flex: 2,
                 child: Center(

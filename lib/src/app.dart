@@ -1,5 +1,5 @@
 import 'package:evoting/src/core/themes/text_theme.dart';
-import 'package:evoting/src/features/register/screens/intro_screen.dart';
+import 'package:evoting/src/features/sign_in/screens/sign_in_screen.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -12,6 +12,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           textTheme: textTheme,
         ),
-        home: IntroScreen());
+        home: SignInScreen());
   }
 }
